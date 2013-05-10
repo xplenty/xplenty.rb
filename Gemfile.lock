@@ -1,0 +1,20 @@
+PATH
+  remote: .
+  specs:
+    xplenty-api (0.0.1)
+      excon (~> 0.20.0)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    excon (0.20.1)
+    minitest (4.7.4)
+    rake (10.0.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  minitest
+  rake
+  xplenty-api!
