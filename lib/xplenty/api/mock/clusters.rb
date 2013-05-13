@@ -40,13 +40,10 @@ module Xplenty
 
       # stub GET /:account_id/api/clusters
       Excon.stub(:expects => 200, :method => :get, :path => %r{^/\w+/api/clusters$} ) do |params|
-        request_params, mock_data = parse_stub_params(params)
-        with_mock_clusters(mock_data) do
-          {
-            :body   => Xplenty::API::OkJson.encode(mock_data[:clusters]),
-            :status => 200
-          }
-        end
+        {
+          :body   => File.read("#{File.dirname(__FILE__)}/cache/clusters.json"),
+          :status => 200
+        }
       end
 
       # stub DELETE /:account_id/api/clusters/:cluster_id
@@ -57,7 +54,7 @@ module Xplenty
         cluster = get_mock_cluster(mock_data, cluster_id)
 
         if cluster
-          mock_data[:clusters].delete cluster
+          # mock_data[:clusters].delete cluster
           {
             :body   => Xplenty::API::OkJson.encode(cluster),
             :status => 200

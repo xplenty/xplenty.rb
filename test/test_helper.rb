@@ -21,14 +21,12 @@ def random_name
 end
 
 def with_cluster(params={}, &block)
-  begin
-    cluster = (xplenty.clusters.body || []).select{|x| ['available', 'creating', 'pending'].include? x['status']}.first
-    cluster ||= xplenty.create_cluster(params).body
-    @cluster_id = cluster['id']
-    ready = false
-    until ready
-      ready = xplenty.get_cluster_info(@cluster_id).body['status'] == 'available'
-    end
-    yield(cluster)
+  cluster = (xplenty.clusters.body || []).select{|x| ['available', 'creating', 'pending'].include? x['status']}.first
+  cluster ||= xplenty.create_cluster(params).body
+  @cluster_id = cluster['id']
+  ready = false
+  until ready
+    ready = xplenty.get_cluster_info(@cluster_id).body['status'] == 'available'
   end
+  yield(cluster)
 end
