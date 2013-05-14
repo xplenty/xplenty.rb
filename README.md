@@ -1,10 +1,10 @@
 ## Xplenty Ruby Wrapper
 
 The Xplenty rb is a Ruby artifact that provides a simple wrapper for the [Xplenty REST Api](https://github.com/xplenty/xplenty-api-doc). 
-To use it, create an TODO:OBJECT-NAME object and call its methods to access the Xplenty API.
+To use it, create an Xplenty::API object and call its methods to access the Xplenty API.
 This page describes the available XplentyAPI methods.
 
-### Create an XplentyAPI Object
+### Create an Xplenty::API Object
 
 Pass your account ID and API key to the XplentyAPI constructor.
 ```ruby
