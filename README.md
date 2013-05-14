@@ -131,3 +131,5 @@ This call retrieves the list of users watching the specified job.
 ```ruby
 @xplenty.job_watchers(9032)
 ```
+
+Released under the [MIT license](http://www.opensource.org/licenses/mit-license.php).
