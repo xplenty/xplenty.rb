@@ -17,7 +17,7 @@ you can use Xplenty::API builder methods to customize these properties.
 ```ruby
 @xplenty = Xplenty::API.new(:api_key => 'your_api_key', :account_id => 'your_account_id', :scheme => 'https', :host => 'api.xplenty.com')
 @xplenty = Xplenty::API.new(:api_key => 'your_api_key', :account_id => 'your_account_id', :headers => { 'User-Agent' => 'your user agent' })
-TODO:INSERT-CODE
+@xplenty = Xplenty::API.new(:api_key => 'your_api_key', :account_id => 'your_account_id', :version => 1)
 ```
 ### List the Cluster Plans
 
