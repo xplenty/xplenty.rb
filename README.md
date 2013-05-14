@@ -5,7 +5,7 @@
 
 The Xplenty rb is a Ruby artifact that provides a simple wrapper for the [Xplenty REST Api](https://github.com/xplenty/xplenty-api-doc). 
 To use it, create an Xplenty::API object and call its methods to access the Xplenty API.
-This page describes the available XplentyAPI methods.
+This page describes the available Xplenty::API methods.
 
 ### Create an Xplenty::API Object
 
