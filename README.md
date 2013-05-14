@@ -13,6 +13,8 @@ Pass your account ID and API key to the XplentyAPI constructor.
 ```ruby
 @xplenty = Xplenty::API.new(:api_key => 'your_api_key', :account_id => 'your_account_id')
 ```
+NOTE: You can leave out :api_key or :account_id if ENV['XPLENTY_API_KEY'] or ENV['XPLENTY_ACCOUNT_ID'] is set accordingly instead.
+
 If you want to supply custom values for the version, scheme or host that the Xplenty::API object will use,
 you can use Xplenty::API builder methods to customize these properties.
 ```ruby
