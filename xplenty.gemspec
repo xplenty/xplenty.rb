@@ -5,8 +5,8 @@ require "xplenty/api/version"
 Gem::Specification.new do |s|
   s.name        = "xplenty-api"
   s.version     = Xplenty::API::VERSION
-  s.authors     = ["xmpolaris (Chen ZhongXue)"]
-  s.email       = ["xmpolaris@gmail.com"]
+  s.authors     = ["xmpolaris (Chen ZhongXue)", "motymichaely (Moty Michaely)"]
+  s.email       = ["xmpolaris@gmail.com", "moty.mi@gmail.com"]
   s.homepage    = "http://github.com/xplenty/xplenty.rb"
   s.summary     = %q{Ruby Client for the Xplenty API}
   s.description = %q{Ruby Client for the Xplenty API}

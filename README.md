@@ -1,7 +1,7 @@
 ## Xplenty Ruby Wrapper
 
-[![Build Status](https://travis-ci.org/xplenty/xplenty.rb.png)](https://travis-ci.org/xplenty/xplenty.rb)
 [![Gem Version](https://badge.fury.io/rb/xplenty-api.png)](http://badge.fury.io/rb/xplenty-api)
+[![Build Status](https://travis-ci.org/xplenty/xplenty.rb.png)](https://travis-ci.org/xplenty/xplenty.rb)
 
 The Xplenty rb is a Ruby artifact that provides a simple wrapper for the [Xplenty REST Api](https://github.com/xplenty/xplenty-api-doc). 
 To use it, create an Xplenty::API object and call its methods to access the Xplenty API.
