@@ -26,7 +26,7 @@ module Xplenty
   class API
 
     HEADERS = {
-      'Accept'                => 'application/vnd.xplenty+json',
+      'Accept' => 'application/vnd.xplenty+json'
     }
 
     OPTIONS = {
@@ -41,9 +41,15 @@ module Xplenty
 
       @api_key = options.delete(:api_key) || ENV['XPLENTY_API_KEY']
       @account_id = options.delete(:account_id) || ENV['XPLENTY_ACCOUNT_ID']
+			@version = options.delete(:version)
+			@mime_type = "application/vnd.xplenty+json"
+			if @version && @version.is_a?(Fixnum)
+				@mime_type = @mime_type << "; version=#{@version}"
+			end
       user_name = "#{@api_key}"
       options[:headers] = HEADERS.merge({
         'Authorization' => "Basic #{Base64.encode64(user_name).gsub("\n", '')}",
+				'Accept'        => @mime_type
       }).merge(options[:headers])
 
       @connection = Excon.new("#{options[:scheme]}://#{options[:host]}", options)

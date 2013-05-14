@@ -1,5 +1,7 @@
 ## Xplenty Ruby Wrapper
 
+[![Build Status](https://travis-ci.org/xplenty/xplenty.rb.png)](https://travis-ci.org/xplenty/xplenty.rb)
+
 The Xplenty rb is a Ruby artifact that provides a simple wrapper for the [Xplenty REST Api](https://github.com/xplenty/xplenty-api-doc). 
 To use it, create an TODO:OBJECT-NAME object and call its methods to access the Xplenty API.
 This page describes the available XplentyAPI methods.
@@ -10,9 +12,11 @@ Pass your account ID and API key to the XplentyAPI constructor.
 ```ruby
 @xplenty = Xplenty::API.new(:api_key => 'your_api_key', :account_id => 'your_account_id')
 ```
-If you want to supply custom values for the version, protocol or host that the XplentyAPI object will use,
-you can use XplentyAPI builder methods to customize these properties.
+If you want to supply custom values for the version, scheme or host that the Xplenty::API object will use,
+you can use Xplenty::API builder methods to customize these properties.
 ```ruby
+@xplenty = Xplenty::API.new(:api_key => 'your_api_key', :account_id => 'your_account_id', :scheme => 'https', :host => 'api.xplenty.com')
+@xplenty = Xplenty::API.new(:api_key => 'your_api_key', :account_id => 'your_account_id', :headers => { 'User-Agent' => 'your user agent' })
 TODO:INSERT-CODE
 ```
 ### List the Cluster Plans
@@ -131,3 +135,5 @@ This call retrieves the list of users watching the specified job.
 ```ruby
 @xplenty.job_watchers(9032)
 ```
+## License
+Released under the [MIT license](http://www.opensource.org/licenses/mit-license.php).
