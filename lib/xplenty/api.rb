@@ -26,7 +26,8 @@ module Xplenty
   class API
 
     HEADERS = {
-      'Accept' => 'application/vnd.xplenty+json'
+      'Accept' 			=> 'application/vnd.xplenty+json',
+			'User-Agent'  => "xplenty-rb/#{Xplenty::API::VERSION}",
     }
 
     OPTIONS = {
