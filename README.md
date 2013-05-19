@@ -40,7 +40,6 @@ You will need to provide an active cluster when starting a new job. Save the clu
 
 This method returns the list of clusters that were created by users in your account.
 You can use this information to monitor and display your clusters and their statuses.
-
 ```ruby
 @xplenty.clusters # return all clusters
 ```
@@ -48,7 +47,6 @@ XplentyAPI.listClusters() is shorthand for XplentyAPI.listClusters(new Propertie
 You can also pass property parameters which filter the clusters according to their status, and determine the order in which they'll be sorted.
 Only clusters which have the status passed in the PARAMETER_STATUS property will be returned, sorted according to the field passed in PARAMETER_SORT,
 in ascending or descending order according to the PARAMETER_DIRECTION property.
-
 ```ruby
 @xplenty.clusters(:status => 'terminated')
 @xplenty.clusters(:sort => 'created', :direction => 'desc')
