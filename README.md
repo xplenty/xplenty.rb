@@ -40,7 +40,6 @@ You will need to provide an active cluster when starting a new job. Save the clu
 
 This method returns the list of clusters that were created by users in your account.
 You can use this information to monitor and display your clusters and their statuses.
-
 ```ruby
 @xplenty.clusters # return all clusters
 ```
@@ -131,5 +130,13 @@ This call retrieves the list of users watching the specified job.
 ```ruby
 @xplenty.job_watchers(9032)
 ```
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
+
 ## License
 Released under the [MIT license](http://www.opensource.org/licenses/mit-license.php).
