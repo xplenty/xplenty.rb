@@ -44,11 +44,7 @@ You can use this information to monitor and display your clusters and their stat
 ```ruby
 @xplenty.clusters # return all clusters
 ```
-XplentyAPI.listClusters() is shorthand for XplentyAPI.listClusters(new Properties()), which returns all clusters with no filtering.
-You can also pass property parameters which filter the clusters according to their status, and determine the order in which they'll be sorted.
-Only clusters which have the status passed in the PARAMETER_STATUS property will be returned, sorted according to the field passed in PARAMETER_SORT,
-in ascending or descending order according to the PARAMETER_DIRECTION property.
-
+You can also pass parameters which filter the clusters according to their status, and determine the order in which they'll be sorted.
 ```ruby
 @xplenty.clusters(:status => 'terminated')
 @xplenty.clusters(:sort => 'created', :direction => 'desc')
@@ -77,10 +73,7 @@ This method returns information for all the jobs that have been created under yo
 ```ruby
 @xplenty.jobs
 ```
-XplentyAPI.listJobs() is shorthand for XplentyAPI.listJobs(new Properties()), which returns all jobs with no filtering.
 You can also pass property parameters which filter the jobs according to their status, and determine the order in which they'll be sorted.
-Only jobs which have the status passed in the PARAMETER_STATUS property will be returned, sorted according to the field passed in PARAMETER_SORT,
-in ascending or descending order according to the PARAMETER_DIRECTION property.
 ```ruby
 @xplenty.jobs(:status => 'idle')
 @xplenty.jobs(:status => 'completed', :sort => 'created_at', :direction => 'asc')
